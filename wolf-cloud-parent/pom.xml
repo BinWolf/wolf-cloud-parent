@@ -8,7 +8,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
 		<module>wolf-cloud-eureka</module>
-	</modules>
+        <module>wolf-cloud-user</module>
+        <module>wolf-cloud-ribbon</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>wolf-cloud-parent</name>
