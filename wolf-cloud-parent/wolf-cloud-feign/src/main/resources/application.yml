@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: wolf-cloud-feign-8765
+
+server:
+  port: 8765
+eureka:
+  client:
+    servicerl:
+     defaultZone: http://localhost:8761/eureka/
+logging:
+  level:
+    com.wolf.cloud.feign.client.HiFeignClient: debug

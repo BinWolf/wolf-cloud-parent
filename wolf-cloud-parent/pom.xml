@@ -10,6 +10,7 @@
 		<module>wolf-cloud-eureka</module>
         <module>wolf-cloud-user</module>
         <module>wolf-cloud-ribbon</module>
+        <module>wolf-cloud-feign</module>
     </modules>
 	<packaging>pom</packaging>
 

@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
  */
 
 @SpringBootApplication
-@EnableDiscoveryClient
+@EnableDiscoveryClient // 注册服务
 public class RibbonApplication {
 
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class RibbonApplication {
     }
 
     @Bean
-    @LoadBalanced
+    @LoadBalanced // 负载均衡
     RestTemplate restTemplate(){
         return new RestTemplate();
     }
