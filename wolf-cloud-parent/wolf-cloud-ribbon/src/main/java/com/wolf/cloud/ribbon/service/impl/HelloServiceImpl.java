@@ -1,5 +1,6 @@
 package com.wolf.cloud.ribbon.service.impl;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.wolf.cloud.ribbon.service.IHelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,12 @@ public class HelloServiceImpl implements IHelloService {
     RestTemplate restTemplate;
 
     @Override
+    @HystrixCommand(fallbackMethod = "hiServiceFallback")
     public String hiService(String name) {
         return restTemplate.getForObject("http://wolf-cloud-user/user/" + name, String.class);
+    }
+
+    private String hiServiceFallback(String name) {
+        return "hiService fallback : " + name;
     }
 }
