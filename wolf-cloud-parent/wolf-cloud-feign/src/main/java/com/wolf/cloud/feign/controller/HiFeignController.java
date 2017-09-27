@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by wolf on 17/9/23.
  */
 @RestController
-@RequestMapping("feign")
 public class HiFeignController {
 
     @Autowired
@@ -19,6 +18,7 @@ public class HiFeignController {
 
     @GetMapping("/sayHi/{name}")
     public String sayHiFromFeign(@PathVariable("name") String name) {
+        name = name + " from Feign";
         return hiFeignClient.sayHiFromFeignClient(name);
     }
 }

@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
  * Created by wolf on 17/9/22.
  */
 @RestController
-@RequestMapping("ribbon")
 public class HelloController {
 
     @Autowired
@@ -16,6 +15,7 @@ public class HelloController {
 
     @GetMapping("/sayHi/{name}")
     public String hello(@PathVariable("name") String name) {
+        name = name + " From Ribbon";
         return helloService.hiService(name);
     }
 }
