@@ -12,6 +12,7 @@
         <module>wolf-cloud-ribbon</module>
         <module>wolf-cloud-feign</module>
         <module>wolf-cloud-zuul</module>
+		<module>wolf-cloud-config</module>
     </modules>
 	<packaging>pom</packaging>
 
