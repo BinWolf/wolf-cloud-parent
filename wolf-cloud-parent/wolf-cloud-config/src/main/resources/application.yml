@@ -3,6 +3,13 @@ server:
 spring:
   application:
     name: wolf-cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/BinWolf/wolf-cloud-parent.git
+          search-paths: wolf-cloud-parent/wolf*
+
 eureka:
   client:
     servicerl:
