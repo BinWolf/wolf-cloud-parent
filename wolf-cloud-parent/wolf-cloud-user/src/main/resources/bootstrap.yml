@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: wolf-cloud-user
+  cloud:
+    config:
+#      uri: http://localhost:8767/
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: wolf-cloud-config
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    servicerl:
+     default-zone: http://localhost:8761/eureka/
+management:
+  security:
+    enabled: false
