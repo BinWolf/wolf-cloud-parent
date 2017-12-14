@@ -21,4 +21,9 @@ public class HiFeignController {
         name = name + " from Feign";
         return hiFeignClient.sayHiFromFeignClient(name);
     }
+
+    @GetMapping("/{name}")
+    public String testBalance(@PathVariable("name") String name) {
+        return "Hi " + name;
+    }
 }

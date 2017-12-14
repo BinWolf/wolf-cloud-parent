@@ -6,7 +6,9 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
- * Created by wolf on 17/9/27.
+ *
+ * @author wolf
+ * @date 17/9/27
  */
 @SpringBootApplication
 @EnableEurekaClient

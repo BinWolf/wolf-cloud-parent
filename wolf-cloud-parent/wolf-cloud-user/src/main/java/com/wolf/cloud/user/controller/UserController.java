@@ -5,7 +5,9 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by wolf on 17/9/22.
+ *
+ * @author wolf
+ * @date 17/9/22
  */
 @RestController
 @RefreshScope  // 配置更新特殊处理

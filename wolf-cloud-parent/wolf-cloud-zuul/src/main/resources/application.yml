@@ -11,7 +11,8 @@ zuul:
   routes:
     feign:
       path: /feign/**
-      serviceId: wolf-cloud-feign-8765
+      url: http://localhost:8765/
     ribbon:
       path: /ribbon/**
       serviceId: wolf-cloud-ribbon-8764
+    wolf-cloud-user: /user/**
