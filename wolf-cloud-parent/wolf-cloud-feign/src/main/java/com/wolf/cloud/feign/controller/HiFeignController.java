@@ -24,6 +24,12 @@ public class HiFeignController {
 
     @GetMapping("/{name}")
     public String testBalance(@PathVariable("name") String name) {
+        try {
+            Thread.sleep(500);
+            System.out.println("------------------------");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "Hi " + name;
     }
 }
